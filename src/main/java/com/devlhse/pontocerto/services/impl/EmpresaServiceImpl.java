@@ -28,7 +28,7 @@ public class EmpresaServiceImpl implements EmpresaService {
 	@Override
 	public Empresa persistir(Empresa empresa) {
 		log.info("Persistindo uma empresa  {}", empresa);
-		return empresa;
+		return this.empresaRepository.save(empresa);
 	}
 
 }
